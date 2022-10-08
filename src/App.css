@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+
+
+::marker{
+    color: white
+}
+p{
+    text-transform: capitalize;
+    color: white;
+}
+
+del{
+    color: red;
+    text-transform: capitalize;
+}
