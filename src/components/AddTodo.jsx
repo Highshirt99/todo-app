@@ -1,6 +1,7 @@
 import React, {useState, useContext, useEffect} from 'react'
 import { TodoContext } from './context/TodoContext';
 import { db } from './../dexie';
+import { useLiveQuery } from 'dexie-react-hooks';
 
 
 function AddTodo() {
@@ -9,16 +10,16 @@ const [text, setText] = useState("")
 const  {addTodo} = useContext(TodoContext)
 
 
+// const allTodos = useLiveQuery(() => db.todo.toArray(), [])
 useEffect(
-  () => {
-    const setDataFromDb = async () => {
-      const textFromDb = await db.todo.get("text")
-      // textFromDb && setText(textFromDb)
-   console.log(textFromDb)
-    }
+() => {
+  const setTodoFromDb = async () =>
+  {
+    const textFromDb = await (db.todo.get("text"))
 
-    setDataFromDb()
   }
+setTodoFromDb()
+}
 )
 const onSubmit = async (e) => {
     e.preventDefault()
@@ -27,9 +28,10 @@ const onSubmit = async (e) => {
         id: Math.random() * 100000000000,
         text
     }
- await db.todo.put(newTodo, "text")  
+ 
   addTodo(newTodo)
-    
+    e.target.todo.value = ""
+    await db.todo.put(newTodo, "text")
 }
 
   return (
@@ -43,7 +45,7 @@ const onSubmit = async (e) => {
                 className='form-control'
                 type="text"
                 name='todo'
-                placeholder= "Add title"
+                placeholder= "Add todo"
                 onChange={(e) => setText(e.target.value)}
                 required
                 />

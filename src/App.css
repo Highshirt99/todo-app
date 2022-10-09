@@ -6,12 +6,35 @@
 ::marker{
     color: white
 }
+
+
+li{
+    background-color: #fff;
+    border: 2px solid grey;
+    box-shadow: 0 2px rgba(100, 98, 98, 0.7);
+    padding: 1px;
+    width: 250px;
+    height: 40px;
+    margin: 0px auto;
+    position: relative;
+    right: 10px;
+
+
+
+}
+
 p{
     text-transform: capitalize;
-    color: white;
+    
+    position: relative;
+    top: 10%;
+    margin-left: 5px;
 }
 
 del{
     color: red;
     text-transform: capitalize;
+    position: relative;
+    top: 10%;
+
 }
