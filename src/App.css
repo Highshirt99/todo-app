@@ -11,6 +11,7 @@
 li{
     background-color: #fff;
     border: 2px solid grey;
+    border-radius: 5px;
     box-shadow: 0 2px rgba(100, 98, 98, 0.7);
     padding: 1px;
     width: 250px;

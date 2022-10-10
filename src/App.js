@@ -9,10 +9,11 @@ function App() {
     <TodoProvider>
       <div >
         <h2 
-        style={{marginBottom: "30px",
+        style={{margin: "30px 0",
       letterSpacing: "1.5px",
-    fontSize: "1.5em"}}
-        className='text-center'>Todo App</h2>
+    fontSize: "1.5em"
+  }}
+        className='text-center'>What are your plans for today?</h2>
        <AddTodo />
        <Todo/>
       </div>
