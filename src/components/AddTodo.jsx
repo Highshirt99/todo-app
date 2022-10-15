@@ -42,7 +42,8 @@ const onSubmit = (e) => {
         <div className="text-center">
             <button 
                    className='btn my-4'
-                    style = {{backgroundColor: "purple" }}
+                    style = {{backgroundColor: "violet",
+                              color: "white" }}
                   > Save </button>
         </div>
         </form>
